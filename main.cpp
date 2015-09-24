@@ -7,6 +7,37 @@
 
 using namespace std;
 
+enum STATE {AVAILABLE, RESERVED, PAYED, WITHDRAWN, CANCELLED, EXPIRED};//expired когда самолет уже прилетел
+enum ACTION {RESERVE, PAY, CANCEL, CHANGE};
+
+Class Ticket_booth { //касса
+  
+  void Ticket_FSM(STATE state, ACTION action){
+    switch(state)
+    {
+      case AVAILABLE:
+        if(action == RESERVE) state = RESERVED;
+        break;
+      case RESERVED:
+        if(action == CANCEL) state = available; //как добавить, что самолет уже прилетел - в expired
+        break;
+      case PAYED:
+        break;
+      case WITHDRAWN:
+        break;
+      case CANCELLED:
+        break;
+      case EXPIRED:
+        break;
+      default:
+    }
+    return;
+  }
+  public:
+    void addTicket();
+    void claimTicket(ACTION action,); //желание полупателя
+}
+
 // Билет
 class Ticket {
   struct time_loc{
@@ -16,10 +47,11 @@ class Ticket {
    int hour;
    int min;
   };
-  enum STATE {AVAILABLE, RESERVED, PAYED, WITHDRAWN, CANCELLED};
+  
   
   }
  public:
+  int ID; //чтобы следить за ним
   double price; // Цена билета
   bool discount; //Скидка
   time_loc ticket_time;
