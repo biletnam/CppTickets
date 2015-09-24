@@ -9,8 +9,21 @@ using namespace std;
 
 // Билет
 class Ticket {
+  struct time_loc{
+   int year;
+   int month;
+   int day;
+   int hour;
+   int min;
+  };
+  enum STATE {AVAILABLE, RESERVED, PAYED, WITHDRAWN, CANCELLED};
+  
+  }
  public:
   double price; // Цена билета
+  bool discount; //Скидка
+  time_loc ticket_time;
+  STATE st;
 };
 
 // Билет на поезд
