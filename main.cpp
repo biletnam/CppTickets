@@ -45,7 +45,7 @@ public:                         //все параметры пихаем в пр
     {
         discountStatus=d;
     }
-    void setStatus(state s);
+    void setStatus(state s);            
     void setDestination(city c)
     {
         destination=c;
@@ -72,13 +72,13 @@ public:                         //все параметры пихаем в пр
     {
         return discountStatus;
     }
-    state getStatus()
+    state getStatus()       //TODO чтобы выводил символами статус
     {
         return status;
     }
     city getDestination()
     {
-        return destination;
+        return destination;     //TODO чтобы выводил символами город
     }
     time_loc getTime()
     {
