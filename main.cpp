@@ -16,19 +16,31 @@ using namespace std;
 int main() {
   setlocale(LC_ALL, "Russian");
 
+  // Пользователь вызывает кассу
+  TicketOffice office;
+  office.buyTicket();
+
   cout << "На что вам нужен билет?" << endl;
   cout << "[1] на поезд" << endl;
   cout << "[2] на самолет " << endl;
   cout << "[3] на подводную лотку " << endl;
   int a = 0;
   cin >> a;
-  if (a == 1) {
-    TrainTicket person;
-  } else if (a == 2) {
-    AirplainTicket person;
-  } else {
-    SubmarineTicket person;
+
+  Ticket* ticket = NULL;
+  switch(a) {
+  case 1:
+    ticket = new TrainTicket;
+    break;
+  case 2:
+    ticket = new AirplainTicket;
+    break;
+  case 3:
+    ticket = new SubmarineTicket;
+    break;
   }
+// TrainTicket* tt = ticket;
+// tt->
 
 
   Ticket t1;

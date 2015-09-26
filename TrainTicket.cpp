@@ -1,9 +1,7 @@
 #include "TrainTicket.h"
 
-TrainTicket::TrainTicket() // Конструктор
-{
+TrainTicket::TrainTicket() { // Конструктор
 }
 
-TrainTicket::~TrainTicket() // Деструктор
-{
+TrainTicket::~TrainTicket() { // Деструктор
 }
