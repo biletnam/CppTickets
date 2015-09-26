@@ -5,7 +5,6 @@
 // о проданном.
 #include <iostream>
 
-
 using namespace std;
 
 enum state {AVAILABLE, RESERVED, PAYED, WITHDRAWN, CANCELLED, EXPIRED}; //  expired когда самолет уже прилетел
@@ -46,7 +45,7 @@ public:                         //все параметры пихаем в пр
     {
         discountStatus=d;
     }
-    void setStatus(state s);            
+    void setStatus(state s);
     void setDestination(city c)
     {
         destination=c;
@@ -73,13 +72,16 @@ public:                         //все параметры пихаем в пр
     {
         return discountStatus;
     }
-    state getStatus()       //TODO чтобы выводил символами статус
+    char* getStatus()       //TODO чтобы выводил символами статус
     {
-        return status;
+       char *STATUS[] = {"AVAILABLE", "RESERVED", "PAYED", "WITHDRAWN", "CANCELLED", "EXPIRED"};
+
+        return STATUS[status];
     }
-    city getDestination()
+    char* getDestination()
     {
-        return destination;     //TODO чтобы выводил символами город
+        char* DESTINATION[]={"NONE=0x0","Elabuga", "Penza", "Siktivkar", "Pskov", "Rostov", "Salehard"};
+        return DESTINATION[destination];     //TODO чтобы выводил символами город
     }
     time_loc getTime()
     {
@@ -141,10 +143,11 @@ int Ticket::counter=0;
 int main()
 {
     setlocale(LC_ALL, "Russian");
+   /*
     cout << "На что вам нужен билет?" << endl;
 		cout << "[1] на поезд" << endl;
 		cout << "[2] на самолет " << endl;
-		cout << "[3] на подводную лодку " << endl;
+		cout << "[3] на подводную лотку " << endl;
 		int a = 0;
 		cin >> a;
 		if (a == 1) {
@@ -156,10 +159,20 @@ int main()
 		else {
 			SubmarineTicket person;
 		}
-	/*Ticket t_1, t_2;
+		*/
+
+		Ticket t1;
+		t1.setStatus(RESERVED);
+		cout<<t1.getStatus();
+		t1.setDestination(Penza);
+		cout<<t1.getDestination();
+
+	/*
+	Ticket t_1, t_2;
 	t_1.setName("test");
 	char* n = t_1.getName();
 	int k = 0;
 	k++;
-	return 0;*/
+	return 0;
+	*/
 }
