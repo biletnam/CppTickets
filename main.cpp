@@ -5,6 +5,7 @@
 // о проданном.
 #include <iostream>
 
+
 using namespace std;
 
 enum state {AVAILABLE, RESERVED, PAYED, WITHDRAWN, CANCELLED, EXPIRED}; //  expired когда самолет уже прилетел
@@ -34,7 +35,7 @@ public:                         //все параметры пихаем в пр
     void setName(char* n)
     {
         delete owner_name;
-        owner_name=new char[5];
+        owner_name=new char[10];
         owner_name=n;
     }
     void setPrice(double p)
@@ -99,7 +100,7 @@ void Ticket::setStatus(state s)
     if((s==AVAILABLE)||(s==WITHDRAWN))
     {
         delete owner_name;
-        owner_name=new char[5];
+        owner_name=new char[10];
         owner_name="none";
     }
     status=s;
@@ -139,10 +140,26 @@ class SubmarineTicket : public Ticket
 int Ticket::counter=0;
 int main()
 {
-    Ticket t_1,t_2;
-    t_1.setName("test");
-    char* n=t_1.getName();
-    int k;
-    k++;
-    return 0;
+    setlocale(LC_ALL, "Russian");
+    cout << "На что вам нужен билет?" << endl;
+		cout << "[1] на поезд" << endl;
+		cout << "[2] на самолет " << endl;
+		cout << "[3] на подводную лотку " << endl;
+		int a = 0;
+		cin >> a;
+		if (a == 1) {
+			TrainTicket person;
+		}
+		else if (a == 2) {
+			AirplainTicket person;
+		}
+		else {
+			SubmarineTicket person;
+		}
+	/*Ticket t_1, t_2;
+	t_1.setName("test");
+	char* n = t_1.getName();
+	int k = 0;
+	k++;
+	return 0;*/
 }
