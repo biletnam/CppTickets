@@ -9,14 +9,14 @@ char* findSymbolFromPoint(char* start,char symbol){
     return NULL;
 }
 
-vector<string*> divideTicketString(string str){
+vector<string*> divideTicketString(string str,char symbol){
     vector<string*> par; //parapmeters of ticket
     char* pointer=&str[0];
-    char* result=(findSymbolFromPoint(pointer,';'));
+    char* result=(findSymbolFromPoint(pointer,symbol));
     while(result!=NULL){
         par.push_back(copyStringPointToPoint(pointer,result));
         pointer=++result;
-        result=(findSymbolFromPoint(pointer,';'));
+        result=(findSymbolFromPoint(pointer,symbol));
     }
     return par;
 }
@@ -37,7 +37,7 @@ void test()
     string test("id=1:prc=10:name=nikolau:dicountstatus=false:dst=moskow:time=1120:status=available;id=1:prc=100:name=david:dicountstatus=true:dst=tver:time=1535:status=available;");
     vector<string*> par;
     par.reserve(10);
-    par=divideTicketString(test);
+    par=divideTicketString(test,';');
     int i;
     for(i=0;i<par.size();i++){
         cout<<*par[i]<<endl;
