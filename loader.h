@@ -7,9 +7,9 @@
 #include <iterator>
 using namespace std;
 
-vector<string*> divideTicketString(string str);
-string* copyStringPointToPoint(char* s,char* e);
-char* findSymbolFromPoint(char* start,char symbol);
+vector<string*> divideTicketString(string str,char symbol); //divide string with symbol and returns vector of strings
+string* copyStringPointToPoint(char* s,char* e);            //returns copy of part of string between two pointers      
+char* findSymbolFromPoint(char* start,char symbol);         //finds next symbol in string and return pointer to this symbol
 void test();
 
-#endif // LOADER_H_INCLUDED
+#endif // LOAD_H_INCLUDED
