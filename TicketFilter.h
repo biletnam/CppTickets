@@ -52,7 +52,7 @@ public:
     double price1;
   Range <double> price;
 
-  Range <int> iii;
+  //Range <int> iii; //это была проверка, что оператор перегружается
   // Время отъезда
   Range <time_loc> time;
   // Пункт назначения
