@@ -47,7 +47,7 @@ void TicketOffice::load(Ticket ticket) {
   // TODO: Загрузка из файла для подводных лодок
 }
 
-void TicketOffice::show(int n){
+void TicketOffice::show(int n){ //пока показывает 1 поле
 
     if(n < tickets.size())
     {
