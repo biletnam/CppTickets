@@ -13,6 +13,7 @@
 #include "SubmarineTicket.h"
 #include "TicketOffice.h"
 #include "common.h"
+#include "loader.h"
 
 using namespace std;
 
@@ -20,6 +21,8 @@ int main() {
   //setlocale(LC_ALL, "Russian");
   SetConsoleCP(65001);
   SetConsoleOutputCP(65001);
+
+  test();
 
   /* Города изначально неизвестны */
   TicketOffice office;
@@ -30,12 +33,12 @@ int main() {
   office.setCityArray("Novgorod");
   office.setCityArray("Salehard");
 
-/* Здесь на самом деле ввод из файла */
+  /* Здесь на самом деле ввод из файла */
   Ticket ticket1(100, false, office.getFromCityArray(0), 22, 11);
   office.load(ticket1);
   Ticket ticket2(200, true, office.getFromCityArray(2), 18, 23);
   office.load(ticket2);
-/***********************/
+  /***********************/
 
   //посмотреть, что ввелось
   office.show(0);

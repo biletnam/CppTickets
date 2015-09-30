@@ -27,6 +27,9 @@ private:
   state status;               //Статус билета
   string destination;           //место назначения
   time_loc ticket_time;       //время отправления
+  virtual void initLoaderParams() { // инициализация пераметров для загрузки этого типа
+    // TODO: реализовать
+  }
 public:                         //все параметры пихаем в приват, общаемся через паблик методы ибо Инкапсуляция
 
   Ticket();

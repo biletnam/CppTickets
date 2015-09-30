@@ -1,4 +1,4 @@
-#include "load.h"
+#include "loader.h"
 
 pPair findParamInParamPairs(string* str,char* params[],int qty)
 {

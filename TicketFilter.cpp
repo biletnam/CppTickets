@@ -72,10 +72,10 @@ void TicketFilter::enterTime()
 
     printf("Enter min hour\n");
     cin >> time.from.hour;
-    cout << "entered: " << time.from,hour << endl;
+    cout << "entered: " << time.from.hour << endl;
     printf("Enter max hour\n");
     cin >> time.to.hour;
-    cout << "entered: " << time.to,hour << endl;
+    cout << "entered: " << time.to.hour << endl;
     return;
 }
 
