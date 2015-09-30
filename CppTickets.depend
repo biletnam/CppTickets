@@ -48,3 +48,67 @@
 1443278952 source:c:\users\gtee\desktop\cpptickets\ticketfilter.cpp
 	"TicketFilter.h"
 
+1443244428 source:c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\airplainticket.cpp
+	"AirplainTicket.h"
+
+1443244428 c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\airplainticket.h
+	"Ticket.h"
+
+1443563534 c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\ticket.h
+	"common.h"
+	<string>
+
+1443609584 source:c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\main.cpp
+	<iostream>
+	<string>
+	<clocale>
+	<Windows.h>
+	"Ticket.h"
+	"TrainTicket.h"
+	"AirplainTicket.h"
+	"SubmarineTicket.h"
+	"TicketOffice.h"
+	"common.h"
+
+1443244428 c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\trainticket.h
+	"Ticket.h"
+
+1443244428 c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\submarineticket.h
+	"Ticket.h"
+
+1443565083 c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\ticketoffice.h
+	<iostream>
+	<vector>
+	"TicketFilter.h"
+
+1443611014 c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\ticketfilter.h
+	<climits>
+	<string>
+	"common.h"
+	"Ticket.h"
+
+1443565150 c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\common.h
+	<cstdlib>
+
+1443244428 source:c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\submarineticket.cpp
+	"SubmarineTicket.h"
+
+1443555648 source:c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\ticket.cpp
+	"Ticket.h"
+
+1443611013 source:c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\ticketfilter.cpp
+	"TicketFilter.h"
+	<Windows.h>
+	<iostream>
+	<cstdio>
+
+1443608437 source:c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\ticketoffice.cpp
+	"TicketOffice.h"
+	<iostream>
+	<fstream>
+	<vector>
+	<Windows.h>
+
+1443244428 source:c:\my documents\c++levelp\cpptickets-pull26sen\cpptickets-master\trainticket.cpp
+	"TrainTicket.h"
+
