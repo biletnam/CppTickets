@@ -23,7 +23,7 @@ void TicketFilter::enterTransport(void)
     while(!in)
     {
 
-        printf("Enter transport, \n");
+        printf("Enter transport:\n");
         printf("[1] train\n");
         printf("[2] plane\n");
         printf("[3] submarine\n");
@@ -52,13 +52,10 @@ void TicketFilter::enterTransport(void)
 
 void TicketFilter::enterPrice()
 {
-    SetConsoleCP(65001); //это UTF-8
-    SetConsoleOutputCP(65001);
-
-    printf("Enter min price\n");
+    cout << "Enter min price: ";
     cin >> price.from;
     cout << "entered: " << price.from << endl;
-    printf("Enter max price\n");
+    cout << "Enter max price: ";
     cin >> price.to;
     cout << "entered: " << price.to << endl;
     return;
@@ -66,14 +63,10 @@ void TicketFilter::enterPrice()
 
 void TicketFilter::enterTime()
 {
-
-    SetConsoleCP(65001); //это UTF-8
-    SetConsoleOutputCP(65001);
-
-    printf("Enter min hour\n");
+    printf("Enter min hour: ");
     cin >> time.from.hour;
     cout << "entered: " << time.from.hour << endl;
-    printf("Enter max hour\n");
+    printf("Enter max hour: ");
     cin >> time.to.hour;
     cout << "entered: " << time.to.hour << endl;
     return;

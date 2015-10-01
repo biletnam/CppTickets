@@ -2,6 +2,7 @@
 #define TICKET_H
 #include "common.h"
 #include <string>
+#include <iostream>
 
 
 
@@ -9,6 +10,18 @@
 struct time_loc {                                                       //  я сократил время до сегодняшнего дня, а то запаритесь с проверкой на кол-во дней в году и високосность
   int hour;
   int minute;
+  // Операторы сравнения (больше / меньше) для времени
+  bool operator>(time_loc& r) {
+    return hour > r.hour || ((hour == r.hour) && (minute > r.minute));
+  }
+  bool operator<(time_loc& r) {
+    return hour < r.hour || ((hour == r.hour) && (minute < r.minute));
+  }
+  // Вывод времени в поток
+  friend std::ostream& operator <<(std::ostream& os, time_loc r) {
+    os << r.hour << ":" << r.minute;
+    return os;
+  }
 };
 
 // Вид транспорта - его в поля каждого наследника добавить? так-то и так понятно, что если

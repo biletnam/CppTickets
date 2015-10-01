@@ -21,13 +21,37 @@ void TicketOffice::buyTicket() { // Покупка билета
     // Фильтр по критериям пользователя
   TicketFilter filter;
 
+  filter.enterTransport();
+  // Выбор цены
+  filter.enterPrice();
   // Выбор времени
-  //filter.time.from = new time_loc;
-  cout << "Time from hour: ";
-  //cin >> filter.time.from->hour;
-  filter.price.from = 0;
-  //cin >> filter.price.from;
-  // TODO: Поиск по списку (узнать о начилии билетов)
+  filter.enterTime();
+
+  // Поиск по списку (чтобы узнать о начилии билетов)
+  for(size_t i = 0; i < tickets.size(); i++) {
+    Ticket& t = tickets[i];
+    cout << t.getDestination() << " " << t.getTime() << " " << t.getPrice() << "$ " << endl;
+    if(filter.price.enabled) {
+      if(t.getPrice() < filter.price.from) {
+        cout << t.getPrice() << " < " << filter.price.from << endl;
+        continue;
+      }
+      if(t.getPrice() > filter.price.to) {
+        cout << t.getPrice() << " > " << filter.price.to << endl;
+        continue;
+      }
+    }
+    if(filter.time.enabled) {
+      if(t.getTime() < filter.time.from) {
+        cout << t.getTime() << " < " << filter.time.from << endl;
+        continue;
+      }
+      if(t.getTime() > filter.time.to) {
+        cout << t.getTime() << " > " << filter.time.to << endl;
+        continue;
+      }
+    }
+  }
 }
 
 void TicketOffice::welcome()

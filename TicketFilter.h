@@ -19,7 +19,9 @@ template <class T>
 struct Range {
   T from;
   T to;
-  //Range(T from = NULL, T to = NULL);
+  bool enabled; // Фильтр включен
+  Range() : enabled(false) {};
+  Range(T from, T to) : from(from), to(to), enabled(true) {};
   //Range(Transport from = NO, Transport to = NO);
 
   template <class T2>
@@ -32,24 +34,20 @@ struct Range {
 
 
 template <class T>
-std::istream& operator >> (std::istream& in, Range<T>& obj)
-{
-in >> obj.from;
-return in;
+std::istream& operator >> (std::istream& in, Range<T>& obj) {
+  in >> obj.from;
+  return in;
 }
 
 template <class T>
-std::ostream& operator << (std::ostream& out, Range<T>& obj)
-{
-    out << obj.from;
-    return out;
+std::ostream& operator << (std::ostream& out, Range<T>& obj) {
+  out << obj.from;
+  return out;
 }
 
 // Фильтр билетов по заданным пользователем критериям
 class TicketFilter {
 public:
-    // Максимальная цена билета
-    double price1;
   Range <double> price;
 
   //Range <int> iii; //это была проверка, что оператор перегружается

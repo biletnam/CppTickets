@@ -22,7 +22,10 @@ int main() {
   SetConsoleCP(65001);
   SetConsoleOutputCP(65001);
 
-  test();
+  cout << "  Ticket office  " << endl;
+  cout << "=================" << endl;
+
+  //test();
 
   /* Города изначально неизвестны */
   TicketOffice office;
@@ -44,14 +47,8 @@ int main() {
   office.show(0);
   office.welcome();
 
-  TicketFilter filter;
-  filter.enterTransport();
-  filter.enterPrice();
-  //filter.enterTime();
-
-
-
-
+  // Покупка билета
+  office.buyTicket();
 
 //  Ticket* ticket = NULL;
 //  switch(a) {
