@@ -32,6 +32,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="AirplainTicket.cpp" />
+		<Unit filename="AirplainTicket.h" />
+		<Unit filename="SubmarineTicket.cpp" />
+		<Unit filename="SubmarineTicket.h" />
+		<Unit filename="Ticket.cpp" />
+		<Unit filename="Ticket.h" />
+		<Unit filename="TicketFilter.cpp" />
+		<Unit filename="TicketFilter.h" />
+		<Unit filename="TicketOffice.cpp" />
+		<Unit filename="TicketOffice.h" />
+		<Unit filename="TrainTicket.cpp" />
+		<Unit filename="TrainTicket.h" />
+		<Unit filename="common.h" />
+		<Unit filename="loader.cpp" />
+		<Unit filename="loader.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />
